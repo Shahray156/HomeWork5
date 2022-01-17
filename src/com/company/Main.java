@@ -37,14 +37,15 @@ public class Main {
         int max = arr[0];
         for (int g = 0; g < arr.length; g++) {
             if (arr[g] < min) {
-                min = arr[g]; }
+                min = arr[g];
+            }
             if (arr[g] > max) {
                 max = arr[g];
             }
-                System.out.println("Минимальная сумма траты за день: " + min + "рублей");
+            System.out.println("Минимальная сумма траты за день: " + min + "рублей");
             System.out.println("Максимальная сумма траты за день: " + max + "рублей");
-            }
         }
+    }
 
     public static void task3() {
         int[] arr = generateRandomArray();
@@ -52,15 +53,35 @@ public class Main {
         for (int r = 0; r < arr.length; r++) {
             sum += r;
         }
-            float average = sum/ (float) arr.length;
-            System.out.println ("Средняя сумма трат за месяц: " + average + "рублей");
+        float average = sum / (float) arr.length;
+        System.out.println("Средняя сумма трат за месяц: " + average + "рублей");
 
+    }
+
+    public static void task4() {
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int k = reverseFullName.length - 1; k >= 0; k--) {
+            System.out.println(reverseFullName[k]);
         }
+    }
 
-        public static void task4() {
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int k =reverseFullName.length - 1; k >= 0; k--) {
-            System.out.println (reverseFullName[k]);
+    public static void task5() {
+        int[][] matrixA = {
+                {1, 1, 1},
+                {1, 1, 1},
+                {1, 1, 1},
+        };
+        for (int i = 0; i < matrixA.length; i++) {
+            for (int j = 0; j < matrixA[i].length; j++) {
+                matrixA[i][j] = 1;
+
+                for (int[] row : matrixA) {
+                    for (int column : row) {
+                        System.out.print(column + " ");
+                    }
+                    System.out.println();
+                }
+            }
         }
     }
 }
